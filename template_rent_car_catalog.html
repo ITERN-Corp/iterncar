@@ -13,12 +13,12 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="car in cars">
                <div class="thumbnail bg-white small-rent">
-                  <a ng-href="carsaleitem" class="rent-lnk"></a>
+                  <a ng-href="carsaleitem/{{car.id}}" class="rent-lnk"></a>
                   <img src="data:image/gif;base64,{{ car.feature_image }}" alt="{{car.make}} {{car.model}}" class="img-responsive animated fadeInLeft">
                          <h4>{{car.name}} <span>{{car.year}}</span>
                   </h4>
                   <span class="car-spec">Starting at <b>Ksh {{car.hire_price}} </b>/<small>day</small> </span>
-                  <a ng-href="carsaleitem" class="btn btn-success">Details <i class="fa fa-angle-right"></i></a>
+                  <a ng-href="carsaleitem/{{car.id}}" class="btn btn-success">Details <i class="fa fa-angle-right"></i></a>
                </div>
             </div>
 

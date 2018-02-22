@@ -250,7 +250,7 @@
                  </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="popularcar in cars">
+                <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="popularcar in cars | filter:{ popular:true }">
                     <div class="thumbnail bg-white small-rent"> 
 
                             <a ng-href="carsaleitem/{{popularcar.id}}" class="rent-lnk"></a>   
@@ -274,7 +274,7 @@
     <!-- /.popular picks -->
 
     <!-- overview-->
-    <section class="bg-grey overview pb30">
+   <!--  <section class="bg-grey overview pb30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center section-intro">
@@ -313,8 +313,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div> 
+    </section>-->
     <!-- /.overview-->
 
 
@@ -391,7 +391,7 @@
                             <div class="form-group input-append col-lg-6"> 
                               <label>Pick-up date and time</label>
                                <!-- <input type="text" ng-model="data.pick_up_date" placeholder="02/20/2018" class="text-uppercase daySelect" id="curentDay"> -->
-                                <input type="date" class="well well-sm" uib-datepicker-popup ng-model="data.pick_up_date" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" id="curentDay" close-text="Close" ng-click="open1()" />
+                                <input type="text" class="well well-sm" uib-datepicker-popup ng-model="data.pick_up_date" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" id="curentDay" close-text="Close" ng-click="open1()" />
 
                              <span class="icon"><i class="fa fa-angle-down"></i></span>
                              <span class="vice">inexorable</span> 
@@ -411,7 +411,7 @@
                            <input type="text" ng-model="data.drop_of_date" placeholder="02/20/2018" class="text-uppercase daySelect" id="dropDay"> --> 
 
 
-                            <input type="date" class="well well-sm" uib-datepicker-popup ng-model="data.drop_of_date" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" id="dropDay" ng-click="open2()" />
+                            <input type="text" class="well well-sm" uib-datepicker-popup ng-model="data.drop_of_date" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" id="dropDay" ng-click="open2()" />
 
  
 
