@@ -1,0 +1,560 @@
+@charset "UTF-8";
+
+/*
+  Description: Responsive stylesheets for Car Dojo HTML/CSS Template by Themes Dojo
+  Author: ThemesDojo
+  Coding: Pascaru Sergiu - Themes Dojo front-end developer
+*/
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {
+
+	main{margin-bottom: 0 !important;}
+	/* FOOTER */
+	footer{position: relative;}
+	footer.bg-grey .footer-widget .socials{margin-bottom: 0;}
+	.footer-widget{
+		float: left;
+		width: 100%;
+	}
+	.footer-widget .socials{margin-bottom: 60px;}
+
+
+	/* MAIN MENU */
+	.cd-main-navigation .nav>li>a.btn{padding: 12px 10px;}
+
+	/* FANTASTIC SLIDER */
+	.fantastic-slider .slide1 .border-cube,
+	.fantastic-slider .car-shadow,
+	.fantastic-slider .owl-item.active .slide1 .images:after{display: none !important;}
+	.fantastic-slider .backtext{font-size: 160px;}
+
+
+	/* POPULAR PICKS BLKS */
+	.small-rent.thumbnail{margin: 0 auto 30px;}
+
+	/* OFFERS */
+	.cd-offer-img .img-responsive{max-width: 100%;}
+
+
+	/* RENT ITEM GALLERY */
+	.rent-item-thumbs .slick-arrow{display: none !important;}
+
+	/* CAR CONDITION */
+	.money-save, .money-discount{letter-spacing: 0;}
+
+	/* WIDGETS */
+	.blk-intro{padding: 17px 25px;}
+	.rent-blk-rows .blk-content{padding: 25px;}
+
+	/*rent widget*/
+	.form-group.input-append input{
+		max-width: 100%;
+		width: 100%;
+	}
+
+	/*car dimensions widget*/
+	.car-width{margin-right: 0;}
+
+	/* CONTACT INFO */
+	section.contact-info{padding: 0 30px;}
+	.contact-info .container{width: 100%;}
+	.contact-info .contact-form textarea.form-control{height: 167px;}
+
+	/* RESERVATION MODAL */
+	.reservation-form .form-group.timepick{padding-top: 0;}
+
+
+	/* LISTING DESCRIPTION */
+	.cd-sidebar .cd-price-list .show-hint{opacity: 1;}
+
+	/* BACKGROUNDS ATTACHAMENT */
+	section.dealer-info{background-attachment: scroll;}
+
+	/* DEALER DETAILS */
+	section.dealer-info{height: 100%;}
+	.dealer-info-wrapp{padding: 28px 30px;}
+
+
+	/* CAR TYPES SMALL BLKS */
+	.cat-blk-link{
+		white-space: nowrap;
+		height: 130px;
+		margin-bottom: 30px;
+	}
+
+	/* SEARCH IDEAS SMALL BLKS */
+	.cd-short-search{margin-bottom: 30px;}
+
+
+	/* REPORTS */
+	.reports-content .reports-numbers li{
+		margin-bottom: 30px;
+		width: 49%;
+	}
+	.reports-content .reports-numbers li:last-child{margin-bottom: 0;}
+
+	
+
+
+	/****--- UI KIT ---****/
+
+	/*FORMS*/
+	.section-intro.demo{margin-top: 30px;}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (max-width: 991px) {
+	
+	/* MAIN MENU */
+	.navbar-collapse.collapse{display: none !important;}
+	.navbar-collapse{
+		position: absolute;
+	    left: 0;
+	    width: 50%;
+	    top: 100%;
+	    background: #fff;
+	    min-height: 85vh;
+	    margin: 0 !important;
+	    transform: translateX(-100%);
+	    transition: transform .2s ease-in-out;
+	}
+	.navbar-collapse.collapse.in{
+		display: block !important;
+		transform: translateX(0);
+	}
+	.navbar-header,
+	.cd-main-navigation .nav>li{width: 100%;}
+	.navbar-toggle{display: block;}
+	.navbar-default .navbar-brand{margin: 25px 0 25px 15px !important;}
+	.dropdown .dropdown-menu{
+		position: absolute !important;
+		top: 50%;
+		width: 100% !important;
+	}
+	.cd-main-navigation .nav>li:last-child a{margin-right: 15px;}
+	.cd-main-navigation .nav>li{
+		transform: inherit;
+		margin-bottom: 10px;
+	}
+	.dropdown:hover > .dropdown-menu {display: none;}
+	.dropdown.open > .dropdown-menu  {display: block;}
+
+	/*hamburger button*/
+	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:focus{background-color: transparent;}
+	.navbar-default .navbar-toggle{ 
+		border: none;
+		transform: rotate(-90deg);
+		overflow: hidden;
+		transition: all .1s ease-in-out;
+	}
+	.navbar-toggle .icon-bar{
+		position: relative;
+		width: 30px;
+	}
+	.navbar-toggle.collapsed .icon-bar{
+		background: #438cca !important;
+		box-shadow: none;
+	}
+	.navbar-toggle .icon-bar{
+		background: #333 !important;
+		box-shadow: 0 0 3px 0 #438cca;
+	}
+	.navbar-toggle .icon-bar+.icon-bar{margin-top: 6px;}
+	.navbar-toggle span:nth-of-type(3){ 
+		margin-left: -60px;
+		transition: .1s margin-left .2s ease-in-out
+	}
+	.navbar-toggle span:nth-of-type(2) {
+		transform: rotate(45deg);
+		top: 8px;
+		transition:  transform .2s linear;
+	}
+	.navbar-toggle span:nth-of-type(4){
+		transform: rotate(-45deg);
+		bottom: 8px;
+		transition:  transform .2s linear;
+	}	
+	.navbar-default .navbar-toggle.collapsed{transform: rotate(0);}
+	.navbar-toggle.collapsed span:nth-of-type(3){ margin-left: 0; }
+	.navbar-toggle.collapsed span:nth-of-type(2) {
+		transform: rotate(0);
+		top: auto;
+	}
+	.navbar-toggle.collapsed span:nth-of-type(4){
+		transform: rotate(0);
+		bottom: auto;
+	}
+	.navbar-nav>li:last-child{margin-top: 20px;}
+	.cd-main-navigation li.dropdown:hover:after, 
+	.cd-main-navigation li.dropdown:hover:before{opacity: 0;}
+
+	/* FANTASTIC SLIDER */
+	.fantastic-slider .backtext{font-size: 120px;}
+	.fantastic-slider .pubtype{
+		font-size: 60px;
+		line-height: 90px;
+	}
+	.fantastic-slider .slide3 a.pull-left{
+		left: 120px;
+		bottom: 120px;
+	}
+
+	/* OFFERS BLOCKS */
+	.cd-offer-blk,
+	.cd-offer-blk.rating{height: auto;}
+	.cd-offer-meta .btn{
+		position: static;
+		transform: translateY(0);
+	}
+	.cd-offer-meta,
+	.cd-offer-blk.rent.rating .cd-offer-meta{padding: 14px 20px 20px;}
+	.cd-offer-meta .btn-default,
+	.cd-offer-inline .cd-offer-meta .btn-default{
+		width: calc(100% - 70px);
+		float: left;
+	}
+	.cd-offer-meta .price{margin-bottom: 15px;}
+	.cd-offer-blk:hover .separator{margin-top: 0;}
+	.cd-offer-blk:hover .cd-offer-meta .price, 
+	.cd-offer-blk:hover .cd-car-spec{opacity: 1;}
+	.cd-offer-meta.nofav .btn-default{width: 100%;}
+
+	/* OFFERS INLINE */
+	.cd-offer-inline{height: auto;}
+	.cd-offer-inline .cd-offer-img{width: 100%;}
+
+	/* SUBSCRIBE */
+	.subscribe-form .form-group button[type="submit"]{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+	/* RENT CAROUSEL */
+	.rent-carousel .item img{position: static;}
+	.form-group.input-append input{
+		max-width: 100%;
+		width: 100%;
+	}
+
+
+	/* RENT BLOCKS */
+	.blk-content.favorite .cd-car-spec{padding: 0 10px 21px;}
+
+
+	/* SIDEBAR FEATURED VEHICLES */
+	.cd-offer-blk.rating{
+		max-width: 320px;
+		float: left;
+		margin: 0 15px 30px;
+	}
+	.form-group.timepick{padding-top: 33px;}
+
+
+	/* MODAL RESERVATION FORM */
+	.reservation-form .form-group.timepick{padding-top: 0;}
+
+
+	/* SALE ITEM GALLERY */
+	#cd-item-slider .carousel-indicators .thumbnail{width: 128px;}
+
+
+	/* SEARCH SIDEBAR */
+	.search-results-wrapp{padding-bottom: 250px;}
+	#switchBtn,
+	#mapView{display: none;}
+
+	/* CAR TYPES SMALL BLKS */
+	.cat-blk-link{margin: 0 0 30px;}
+
+	/* MY SETTINGS */
+	.cd-my-list, .account-control{height: 100% !important;}
+	.price-desc{padding: 0 40px;}
+
+
+	/****--- UI KIT ---****/
+
+	/*blocks examples*/
+	.cd-offer-blk.no-bg.hover .cd-offer-meta .btn-default,
+	.cd-offer-blk.no-bg .cd-offer-meta .btn-default,
+	.cd-offer-inline.half .cd-offer-meta .btn-default{width: calc(100% - 60px);}
+	.sold-item .cd-offer-meta .btn-default,
+	.cd-offer-blk.no-bg.hover .cd-offer-meta.nofav .btn-default, 
+	.cd-offer-blk.no-bg.hover.sold-item .cd-offer-meta .btn-default{width: 100%;}
+
+	/*inline - half*/
+	.cd-offer-inline.half{height: auto;}
+	.cd-offer-inline.half .cd-offer-meta .btn-default{margin-right: 10px;}
+
+
+
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width: 767px) {
+
+
+	/* MAIN MENU */
+	.navbar-inverse .container,
+	.navbar .container{width: 100%;}
+	.cd-main-navigation.affix{height: auto;}
+	.navbar-header{width: auto;}
+	.navbar-collapse{width: 100%;}
+
+
+	/* FOOTER */
+	.footer-widget .socials{margin-bottom: 0;}
+
+
+	/* FANTASTIC SLIDER */
+	.fantastic-slider .item{height: 450px;}
+	.fantastic-slider .slide1 .border-cube,
+	.fantastic-slider .car-shadow,
+	.fantastic-slider .owl-item.active .slide1 .images:after{display: none !important;}
+	.fantastic-slider .slide1 .backtext{
+		top: -70px;
+		z-index: 2;
+	}
+	.fantastic-slider .backtext{font-size: 64px;}
+	.fantastic-slider .pubtype,
+	.fantastic-slider .pubtype span{
+		font-size: 32px !important;
+		line-height: 30px;
+		padding-left: 0;
+		transform: translateY(0);
+		display: block !important;
+	}
+	.fantastic-slider a.pull-right{
+		right: 15px;
+		bottom: 60px;
+		text-align: right;
+	}
+	.fantastic-slider .slide2 a.pull-right{bottom: 90px;}
+	.fantastic-slider .slide3 a.pull-left{
+		bottom: 180px;
+		left: auto;
+		right: 15px;
+		text-align: right;
+	}
+	.fantastic-slider .images{padding-top: 80px !important;}
+	.fantastic-slider .slide3 .images.outer{bottom: 0;}
+	.progress-wrapp{display: none;}
+
+	
+	/* RENT CAROUSEL */
+	.rent-carousel .item .car-desc h1{
+		font-size: 36px;
+		line-height: 36px;
+	}
+	.rent-blk-rows .btn-link{
+		text-align: left;
+		margin-bottom: 0;
+	}
+	
+	.form-group.timepick{padding-top: 0;}
+
+
+	/* MAIN SLIDER */
+	.cd-top-container{
+		height: 100%;
+		align-items: inherit;
+	}
+	.cd-top-search .form-group{width: 100%;}
+	.cd-top-subscribe, .cd-top-subscribe a{color: #333;}
+
+	
+	/* TESTIMONIALS */
+	.testimonial{margin-top: 15px;}
+	.testimonial:before{
+		top: -3px;
+		left: 45px;
+		transform: rotate(135deg);
+	}
+
+	
+	/* OFFERS BLOCKS */
+	.cat-link-xl,
+	.rent-blk-rows{
+		max-width: 320px;
+		margin: 0 auto 30px;
+	}
+
+
+	/* RENT ITEM GALLERY */
+	.rent-item-thumbs .slick-item.thumbnail{margin: 0;}
+
+
+	/* CAR CONDITION */
+	.cd-condition-blk{flex-direction: column;}
+	.cd-condition-blk .blk{margin-bottom: 30px;}
+	.cd-condition-blk .blk:last-of-type{margin-bottom: 0;}
+	.listing-content .column-blk{margin-bottom: 25px;}
+	.blk-intro{padding: 17px 25px;}
+
+
+	/* CAR RESERVATION MODAL */
+	.modal-dialog.reservation-form-wrapp{
+		width: 100% !important;
+		margin: 15px 0; 
+	}
+	.reservation-form .car-preview img{width: 100%;}
+	.reservation-form .btn{padding: 13px 15px;}
+
+		
+	/* CONTACT INFO */
+	section.contact-info{padding: 0 15px;}
+	.contact-info .contact-form .inputs-side, 
+	.contact-info .contact-form .control-side{
+		width: 100%;
+		padding: 0;
+	}
+	.cd-form-wrapp{margin-bottom: 30px;}
+
+
+	/* LISTING DESCRIPTION */
+	.cd-listing-description{padding: 25px 0 0 0;}
+	.cd-listing-description>.heading{
+		margin: 0 0 20px 0;
+		padding: 0 15px;
+	}
+	.cd-listing-description .panel{
+		margin-bottom: 23px;
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+	}
+	.cd-listing-description .panel-heading{
+		position: relative;
+		border: none;
+		border-radius: 0;
+	}
+	.cd-listing-description .panel .listing-title{
+		width: 100%;
+		padding: 5px 0;
+	}
+	.listing-title a[role="button"]{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.panel-body .listing-content{padding: 0;}
+	.panel-body .certified-list{
+		padding: 15px;
+		flex-direction: column;
+	}
+	.panel-body .certified-list li{margin: 10px 0;}
+
+
+	/* CAR SUBMIT LISTINGS */
+	.cd-widget-title.paddinglr30,
+	.cd-widget-content.paddinglr30{padding: 15px !important;}
+	.cd-widget.paddinglr30{padding: 0 15px !important;}
+	.upload-list{margin: 20px -26px 0 0;}
+	.add-car-form .form-group.width25,
+	.add-caracteristic-blk .blk-content li.width33,
+	.add-caracteristic-blk .blk-content .interior-materials{width: 100%;}
+	.add-caracteristic-blk .blk-content li.width33{margin-bottom: 15px;}
+	.add-car-form .form-group.width25 .form-control{margin-bottom: 0;}
+	.color-list li{
+		padding: 0;
+		margin: 5px;
+	}
+	.add-caracteristic-blk .blk-content .interior-materials{padding: 0;}
+	.flex-between{flex-direction: column;}
+	.cd-content-description .submit-blk .btn{
+		width: 100%;
+		margin-top: 15px;
+	}
+	.upload-list li{width: calc(50% - 22px);}
+	.upload-list .upload-blk{
+		width: 100%;
+	}
+	
+
+	/* SEARCH SIDEBAR */
+	.cd-search-sidebar{margin-bottom: 30px;}
+	.search-results-wrapp{padding-bottom: 120px;}
+
+	/* NAVBAR FIXED BOTTOM (SELECTED ELEMENTS) */
+	.navbar-fixed-bottom .show-nav{margin-bottom: 30px;}
+	.navbar-fixed-bottom.small{
+		padding: 25px 0;
+		transform: translateY(80%);
+		transition: all .3s ease-in-out;
+	}	
+	/* selected tags*/
+	.selected-tags .tag{margin: 0 15px 15px 0;}
+	.navbar-fixed-bottom .btn-link,
+	.navbar-fixed-bottom .btn-default{margin-left: 0;}
+	.navbar-fixed-bottom .btn-default{width: 100%;}
+
+	/*additional features*/
+	#cd-search-features{bottom: 75px;}
+
+	/* CATALOG MAP */
+	.catalog.full-map.visible{position: static;}
+
+
+	/* DEALER DETAILS */
+	.dealer-info-wrapp{padding: 28px 30px 0;}
+	.dealer-info-wrapp .contact-form .inputs-side{margin-bottom: 25px;}
+	.dealer-info-wrapp .contact-form .inputs-side,
+	.dealer-info-wrapp .contact-form .control-side{padding: 0;}
+	
+
+	/* MY FAVORITES LIST ITEMS */
+	.cd-my-list .listing-item .cd-offer-short .heading{
+		display: block;
+		transform: translateY(0);
+	}
+	.cd-my-list .listing-item .cd-offer-short .cd-car-spec{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.cd-my-list .listing-item .cd-offer-short img{height: 75px;}
+	.account-control{height: 100% !important;}
+	ul.item-controls{
+		white-space: nowrap;
+		width: 100%;
+		text-align: center;
+		margin: 15px 0 0;
+	}
+
+	/*pagination*/
+	.pagination{white-space: nowrap;}
+
+
+	/* REPORTS */
+	.reports-content .reports-numbers li{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.reports-content .reports-numbers li:last-child{margin-bottom: 0;}
+	.reports-diagrams{padding: 0 15px;}
+
+
+	/* MY SETTINGS */
+	form.account-form .form-group img{width: 100%;}
+
+
+	
+	/****--- UI KIT ---****/
+
+	/*COLORS*/
+	.color-blk .color{max-width: 170px;}
+
+	/*SLIDERS*/
+	.rent-carousel .carousel-indicators{margin: 0;}
+
+
+
+}
+

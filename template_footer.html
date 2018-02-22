@@ -1,0 +1,111 @@
+<!-- footer section -->
+<footer class="bg-inverse">
+
+
+    <!-- footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-3">
+                <div class="footer-widget">
+                    <h4 class="heading">Top 3 highlights</h4>
+
+
+                     <div class="cd-offer-short"  ng-repeat="popularcar in cars | filter:query | limitTo:3" > 
+                        <img src="data:image/gif;base64,{{ popularcar.feature_image }}" alt="{{popularcar.make}} {{popularcar.model}}" class="img-rounded pull-left">
+
+                        <h4 class="heading">
+                        <a href="#" ng-click="load_singleListing(popularcar)"> {{popularcar.name}}</a>
+
+                        </h4>
+
+                        <span class="cd-car-spec">{{popularcar.model}}</span>
+                        
+
+
+                        <a href="#" ng-click="load_singleListing(popularcar)" class="btn btn-link">View details</a>
+
+                    <button class="btn btn-danger"> <i class="fa fa-heart-o"></i> <i class="fa fa-heart"></i> </button>
+
+
+                     </div>
+
+
+            </div>
+
+        </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="footer-widget">
+                    <h4 class="heading">About us</h4>
+                    <p> Itern Motors the ultimate resource for car industry </p>
+
+                    <address> Nairobi City, <br> Nairobi, CBD </address>
+                    <ul class="list-unstyled phone-nrs">
+                        <li> <span class="pull-left">Mobile</span>
+                            <a href="callto:+254700242203" class="pull-right"><span>+254</span><span class="bura">paulownia</span> 700242203</a>
+
+                        </li>
+
+                        <li class="clearfix"></li>
+                        <li> <span class="pull-left">Office</span>
+                            <a href="callto:+254718466610" class="pull-right"><span>+254</span><span class="bura">paulownia</span> 718466610</a> ] </li>
+                        <li class="clearfix"></li>
+                    </ul>
+                    <h4 class="heading">Social media links</h4>
+                    <ul class="list-inline socials">
+                        <li><a href="https://twitter.com/themesdojo"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/themesdojo"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="footer-widget">
+                    <h4 class="heading">Subscribe to car deals</h4>
+                    <p>Be among the first ones to find out about our rentable deals.</p>
+
+                    <form class="subscribe-form" action="#" method="post">
+                        <div class="form-group"> <label>E-mail address</label> <input type="email" class="form-control" placeholder="youremail@address.com"> </div> <button class="btn btn-success" type="submit">Subscribe now <i class="fa fa-angle-right"></i></button> </form>
+                    <p class="text-info"> Don’t worry, we don’t spam or give your personal contact details to anyone. </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="footer-widget">
+                    <h4 class="heading">Useful links</h4>
+                    <ul class="list-unstyled">
+                        <li> <a ng-href="dealercatalog">Car dealer</a></li>
+                        <li> <a ng-href="carlist">Vehicles catalog search</a>
+                        </li>
+                        <li> <a ng-href="carlist">Car for sale item details</a>
+                        </li>
+                        <li> <a ng-href="dealercatalog">Dealers</a>
+                        </li>
+                        <li> <a ng-href="submitnewcar">Submit car for sale</a>
+                        </li>
+                        <!-- <li> <a href="my-account.html">My Account</a>
+                                    </li> -->
+
+                        <li> <a href="#"><b>Buy Now!</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-6"> <span>&copy; 2017 <a href="#" target="_blank">Itern</a>    &nbsp; All rights reserved.</span> </div>
+                <div class="col-sm-6 col-lg-6 text-right text-capitalize"> <a ng-href="home">Itern Motors - Automotive industry</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.footer -->
+</footer>

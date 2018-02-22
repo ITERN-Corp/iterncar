@@ -1,0 +1,237 @@
+
+<!-- main content -->
+<main class="account-wrapp bg-grey pb30">
+    <div class="container">
+        <div class="row">
+            <!-- my items -->
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="bg-white shadow rounded cd-my-list">
+                    <div class="heading clearfix">
+                        <h4 class="pull-left">My car listings 
+                           <span class="fitz">saxicolous</span>
+                       </h4>
+                        <h4 class="pull-right">Regular account</h4>
+                    </div>
+
+
+                    <div class="listing-item" ng-repeat="car in cars | filter:{ agent_id: currentUser.partner_id }">
+                        <div class="cd-offer-short pull-left"> <img src="assets/images/cars/car1.jpg" alt="car-photos" class="img-rounded pull-left">
+                            <h4 class="heading"><a href="#">{{car.name}} <span>{{car.year}}</span></a>
+                            </h4> <span class="cd-car-spec"> Hire
+                             KES {{car.hire_price}}, 38 755 mi, 3.0 AT</span>
+                     </div>
+                        <ul class="list-inline pull-right item-controls">
+                            <li><a href="#" ng-click="editThisCar(car)">Edit listing</a>
+                            </li>
+
+                            <li><a href="#">Unpublish</a>
+                                
+
+                            </li>
+                            <li><a href="#">Make featured</a>
+                               
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <hr class="separator"> 
+
+                    </div>
+
+
+
+                    <!-- pagination-control -->
+                    <div class="pagination-control clearfix">
+                        <nav aria-label="Page navigation">
+                            <ul class="pull-left pagination">
+                                <li class="active bg-grey"><a href="#">1</a>
+                                    <p class="lehi">detribalise</p><span class="poll">overdelicious superrefined</span></li>
+                                <li><a href="#">2</a>
+                                    <p class="lehi">undermelody</p><span class="vice">detoxicated controversial</span></li>
+                                <li><a href="#">3</a>
+                                    <p class="bura">hexadecane</p><span class="classy">semiconical necessitude</span></li>
+                                <li><a href="#">4</a>
+                                    <p class="bura">paulownia</p><span class="lehi">thioester unengineered</span></li>
+                                <li><a href="#">5</a>
+                                    <p class="kiwi">hyperelegance</p><span class="fitz">nonallegation underscoring</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- /.pagination-control -->
+                </div>
+            </div>
+            <!-- /.my items -->
+            <!-- acount sidebar -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="bg-white shadow rounded account-control">
+                    <h4 class="heading">My account</h4>
+                    <ul class="list-unstyled">
+                        <li> 
+                        
+                            <a ng-click="addNewCar()" class="btn btn-success">Add new car listing</a>
+
+                        </li>
+
+                        <li class="active">
+
+                         <a href="my-account.html" class="btn btn-link"> 
+                            <i class="fa fa-car"></i>My car listings <span class="pull-right">12</span>
+
+                        </li>
+                        <li> 
+                            <a href="reports.html" class="btn btn-link"> <i class="fa fa-bar-chart"></i>Sales &amp; reports </a>
+                        </li>
+                        <li> 
+                            <a href="favorites.html" class="btn btn-link"> <i class="fa fa-heart"></i>My favorites <span class="pull-right">4</span>
+                             </a>
+                        </li>
+                        <li> 
+                            <a href="notifications.html" class="btn btn-link"> <i class="fa fa-bell"></i>Notifications <span class="pull-right">6</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                         <a href="settings.html" class="btn btn-link"> <i class="fa fa-cog">
+                             
+                         </i>My account settings </a>
+                            
+                        </li>
+                        <li> 
+                            <a href="login-forms.html" class="btn btn-link"> <i class="fa fa-sign-in">
+                                
+                            </i>Login &amp; register forms </a>
+                             </li>
+                        <li> 
+                            <a ng-href="home"  ng-click="logout()" class="btn btn-link"> <i class="fa fa-sign-out"></i>Sign out </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.acount sidebar -->
+        </div>
+    </div>
+    <!-- end container -->
+    <!-- pricing plans -->
+    <section class="prices bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-intro">
+                    <h1 class="heading">Premium</h1> 
+                    <span>Here are our pricing plans</span><span class="classy">hospitaler</span> 
+                </div>
+            </div>
+            <!-- prices blocks -->
+            <div class="row">
+                <!-- basic -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="price-blk shadow bg-white">
+                        <div class="blk-intro">
+                            <h4 class="pull-left">1 month free</h4> 
+                            <span class="pull-right rent-price"> 
+                                <span class="rent-text">KES0.00</span>
+                                <span class="bura">exteriorize</span><
+                                small>/month</small>
+                                 </span>
+                                 <span class="sown">untapering</span>
+                            <div class="clearfix"></div>
+
+                        </div>
+                        <div class="blk-content">
+                            <div class="price-desc text-center"> <span class="icon icon-happy"></span><span class="divc">abolisher</span>
+                                <h4>Basic</h4>
+                                <p> The right package to get you started and you’ll always be able to upgrade. </p>
+                                <p class="kiwi">inapproachability</p>
+                                <span class="lefty">hospitaler graphitizing</span><span class="frow">dissonancy</span> 
+                            </div>
+                            <ul class="list-unstyled price-content">
+                                <li>1 standard car ad with 30 days availability</li>
+                                <li>0 features ad listing</li>
+                            </ul>
+                            <div class="form-group">
+                             <label>Number of months</label>
+                              <select class="cd-select rent-select oneFree js-example-basic-hide-search" style="width: 100%"> <option value="0.00" data-months="0" selected>1 month (free)</option> <option value="10.00" data-months="3" >3 months (KES10/month)</option> 
+                                <option value="8.00" data-months="6" >6 months (KES8/month)</option> 
+                                <option value="6.00" data-months="12" >12 months (KES6/month)</option>
+                                </select>
+                                 </div> 
+                                <button type="submit" class="btn btn-success"> Purchase this plan <span class="total-price pull-right">KES0.00</span><span class="frow">paulownia</span> 
+                                </button>
+                             </div>
+                    </div>
+                </div>
+                <!-- individuals -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="price-blk shadow bg-white">
+                        <div class="blk-intro">
+                            <h4 class="pull-left">Pro members</h4> <span class="pull-right rent-price"> <span class="rent-text">KES15.00</span><span class="kiwi">endamagement</span><small>/month</small> </span><span class="vice">crystallographical</span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="blk-content">
+                            <div class="price-desc text-center"> 
+                                <span class="label label-danger text-uppercase">Best</span><span class="coma">pseudohumanistic</span> 
+                                <span class="icon icon-speedometer"></span>
+                                <span class="frow">patripassianist</span>
+                                <h4>Individuals</h4>
+                                <p> You own more than a car and want to put them on sale? This is the right package for you then. </p>
+                                <p class="lefty">bathymetry</p>
+                                <span class="frow">hypognathism nonnegligibleness</span>
+                                <span class="classy">isohyetal</span> 
+                            </div>
+                            <ul class="list-unstyled price-content">
+                                <li>1 standard car ad with 30 days availability</li>
+                                <li>3 features ad listing</li>
+                            </ul>
+                            <div class="form-group"> <label>Number of months</label>
+                             <select class="cd-select rent-select js-example-basic-hide-search" style="width: 100%"> <option value="15.00" data-months="1" selected>1 month (KES15.00)</option>
+                              <option value="10.00" data-months="3" >3 months (KES10/month)</option> <option value="8.00" data-months="6" >6 months (KES8/month)</option> 
+                              <option value="6.00" data-months="12" >12 months (KES6/month)</option> 
+                          </select> 
+                            </div> 
+                            <button type="submit" class="btn btn-success"> Purchase this plan <span class="total-price pull-right">KES15.00</span><span class="sown">neogean</span> 
+                            </button>
+                         </div>
+                    </div>
+                </div>
+                <!-- business -->
+                <div class="col-sm-6 col-lg-4">
+                    <div class="price-blk shadow bg-white">
+                        <div class="blk-intro">
+                            <h4 class="pull-left">Companies</h4>
+                             <span class="pull-right rent-price"> 
+                                <span class="rent-text">KES25.00</span>
+                                <span class="vice">tonsillotomy</span><small>/month</small>
+                                 </span>
+                                 <span class="coma">multijugate</span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="blk-content">
+                            <div class="price-desc text-center"> <span class="icon icon-strategy"></span><span class="fitz">mediatise</span>
+                                <h4>Business</h4>
+                                <p> Have an entire fleet of vehicles and want to put them on sale? Also get detailed reports? </p>
+                                <p class="mydiv">rationalizing</p><span class="classy">monogyny melodramatising</span>
+                                <span class="sown">natatoriums</span> </div>
+                            <ul class="list-unstyled price-content">
+                                <li>100 standard car ad with 30 days availability</li>
+                                <li>50 features ad listings + sales reports</li>
+                            </ul>
+                            <div class="form-group"> 
+                                <label>Number of months</label> 
+                                <select class="cd-select rent-select js-example-basic-hide-search" style="width: 100%"> 
+                                       <option value="25.00" data-months="1" selected>1 month (KES25.00)</option>
+                                       <option value="23.00" data-months="3" >3 months (KES23/month)</option> 
+                                       <option value="18.00" data-months="6" >6 months (KES6/month)</option>
+                                       <option value="15.00" data-months="12" >12 months (KES12/month)</option> 
+                               </select>
+                            </div>
+                             <button type="submit" class="btn btn-success"> Purchase this plan <span class="total-price pull-right">KES25.00</span><span class="coma">proritual</span> 
+                             </button> 
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.prices blocks -->
+        </div>
+    </section>
+    <!-- /.pricing plans -->
+</main>
+<!-- /.main content -->
+        

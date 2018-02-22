@@ -1,0 +1,140 @@
+
+<!--header-->
+<header>
+
+    <!-- top contacts navbar -->
+    <nav class="navbar-inverse flexbox heading">
+        <div class="container">
+            <!-- top socials list -->
+            <ul class="list-inline pull-left cd-top-socials">
+                <li><a href="https://twitter.com/themesdojo"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="https://www.facebook.com/themesdojo"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/stickerspub/"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li><a href="https://www.youtube.com/channel/UCgcwlHEyCNw7veTlNoHuuSA"><i class="fa fa-youtube"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+
+            <!-- top phone nr -->
+            <ul class="list-inline pull-right cd-top-phone">
+                <li><a href="callto:+1234567890">+254 715 549 960</a></li>
+                <li ng-if="currentUser">|| Current User: {{currentUser.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /.top contacts navbar -->
+
+    <!-- main navigation -->
+     <nav class="navbar navbar-default flexbox heading cd-main-navigation" data-spy="affix" data-offset-top="130">
+
+
+                     <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header"> 
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cd-main-menu" aria-expanded="false">
+                         <span class="sr-only">Toggle navigation</span>
+                         <span class="fitz">verrucosity</span> 
+                         <span class="icon-bar"></span>
+                         <span class="frow">nonunanimous</span> 
+                         <span class="icon-bar"></span><span class="bura">exegetics</span> <span class="icon-bar"></span><span class="classy">superadornment</span> 
+                        </button> 
+                        <a class="navbar-brand" href="/l" data-bg="assets/images/logo.jpg"></a>
+                        <p class="kiwi">interantagonism</p><span class="divc">annexationism pyophthalmitis</span> </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="cd-main-menu">
+                        <a class="navbar-brand" href="/">
+                            <img src="assets/images/logo.jpg" alt="" class=" pull-left logo"/></a> 
+
+
+
+                     <ul class="nav navbar-nav navbar-right">
+                    <li class="active"> <a ng-href="home" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars <i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <!--<li><a href="catalog-grid-left-sidebar.html">Cars catalog grid (left sidebar)</a>
+                                       </li>-->
+                                <li><a ng-href="carlist">Cars catalog list</a>
+                                </li>
+                                <!--<li><a href="catalog-map-left-sidebar.html">Cars catalog map (left sidebar)</a>
+                                         </li>-->
+                                <li><a ng-href="carsaleitem">Car for sale details</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rental <i class="fa fa-angle-down"></i></a>
+
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <!--<li><a href="rent-car-catalog.html">Rent a car vehicles catalog</a>
+                                        </li>-->
+
+                                <li><a ng-href="rentcarcatalog">Rent a car vehicles catalog</a>
+                                </li>
+                                <!--
+                                       <li><a href="car-rent-item.html">Car for rent item details</a>
+                                        </li>
+                                        -->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dealers <i class="fa fa-angle-down"></i></a>
+
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a ng-href="dealercatalog">Dealers catalog</a>
+                                </li>
+                                <!--
+                                        <li><a href="dealer-details.html">Dealer details page</a>
+                                        </li>
+
+                                        -->
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li ng-if="currentUser" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account <i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled">
+                                <li><a ng-href="mylisting">My car listings</a>
+                                </li>
+                                <li><a ng-href="reports">Sales &amp; reports</a>
+                                </li>
+                                <li><a ng-href="favorites">Favorites</a>
+                                </li>
+                                <li><a ng-href="notification">Notifications</a>
+                                </li>
+                                <li><a href="/" ng-click="logout()"><i class="sl sl-icon-power"></i> Logout</a></li>
+                    </li>
+                    <li><a ng-href="settings">Settings</a>
+                    </li>
+                    </ul>
+                    </div>
+                    </li>
+
+
+
+                    <li ng-if="!currentUser"><a ng-href="login" class="btn btn-success">Sign In</a>
+                    </li>
+
+                    <li><a ng-href="carlist" class="btn btn-danger">Buy Now!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- /.main navigation -->
+
+</header>
+<!-- /.header-->

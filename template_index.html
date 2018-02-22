@@ -1,0 +1,496 @@
+<!-- main content -->
+<main>
+    <!-- rent carousel -->
+    <div id="rent-me" class="carousel slide rent-carousel" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <!-- third slide -->
+            <div class="item third" ng-repeat="c in featured_cars" ng-class="{'active': c == featured_cars[0]}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-6">
+                            <div class="car-desc animated fadeInLeft">
+                                <h3 class="text-uppercase"> {{c.make_id[1]}} {{c.model_id[1]}} <span>{{c.year}}</span>
+
+                                </h3> <span class="spects"> {{c.description}} </span>
+
+                                <span class="rating"> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                            <i class="fa fa-star"></i> 
+                                        </span>
+                            </div>
+                        </div>
+                        <!-- <img src="assets/images/slider/car-rent2.png" alt="mercedes-benz" class="img-responsive animated fadeInLeft"> -->
+
+                        <img src="data:image/gif;base64,{{ c.feature_image }}" alt="{{c.make}} {{c.model}}" class="img-responsive animated fadeInLeft">
+
+                        <div class="col-md-5 col-lg-offset-2 col-lg-4">
+                            <div class="rent-blk-rows bg-white shadow animated fadeInRight">
+                                <div class="blk-intro">
+                                    <h4 class="pull-left">Rent this car</h4>
+
+                                    <!-- <span class="pull-right rent-price"> KES 100+<small>/day</small> </span>-->
+
+                                    <span class="mydiv">unmilitarised</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row blk-content">
+                                   <div class="col-sm-12 col-lg-12 form-group">
+
+                                    <label>Pick-up place </label> 
+                                    <select class="cd-select select-region" style="width: 100%;"> 
+                                        <option value="1">{{selectedCar.location}}</option> 
+                                        
+                                    </select>
+                                        
+
+                                      <!-- <button type="button" class="btn btn-link addLoc">Specify a different drop-off location</button>  -->
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-6 form-group input-append">
+                                     <label>Pick-up date and time</label> 
+                                     <input type="text" placeholder="Choose a date" class="daySelect">
+                                      <span class="icon"><i class="fa fa-angle-down"></i>
+                                      </span>
+                                      <span class="classy">dynamotor</span> 
+                                  </div>
+
+                                  <div class="col-sm-6 col-lg-6 form-group input-append timepick"> 
+                                    <input type="text" placeholder="12:00 AM" class="timeSelect"> 
+                                    <span class="icon"><i class="fa fa-angle-down"></i></span>
+                                    <span class="poll">patripassianist</span> 
+                                   </div>
+
+                                    <div class="col-sm-6 col-lg-6 form-group input-append"> 
+                                    <label>Drop-off date and time</label>
+                                     <input type="text" placeholder="Choose a date" class="daySelect"> 
+                                     <span class="icon"><i class="fa fa-angle-down"></i></span>
+                                     <span class="vice">cyclopentadiene</span>
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-6 form-group input-append timepick"> <input type="text" placeholder="12:00 AM" class="timeSelect">
+                                     <span class="icon"><i class="fa fa-angle-down"></i></span>
+                                     <span class="bura">annexationism</span>
+                                     </div>
+
+                                    <div class="col-sm-12 col-lg-12"> 
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#reservation-modal" ng-click="select_reserve_car(c)">Continue to car reservation <i class="fa fa-angle-right"></i></a>
+                                    <p class="bura">rationalizing</p><span class="bura">euphemia reapplying</span> 
+                                   </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.third slide -->
+        </div>
+
+
+
+        <!-- carousel progress bar -->
+        <div class="progress-bar-bg">
+            <div class="transition-timer-carousel-progress-bar"></div>
+        </div>
+    </div>
+    <!-- /.rent carousel -->
+    <!-- articles -->
+    <section class="resources bg-white pb30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-intro">
+                    <h1 class="heading">Car rental advice</h1> 
+                    <span>We’ve prepared some useful articles and resources for you to get started</span>
+                    <span class="mydiv">nonunanimous</span> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <div class="resource-blk rounded"> 
+                        <img src="assets/images/cars/res1.jpg" alt="resource-blk-image" class="img-responsive">
+                        <div class="content">
+                            <h4 class="heading">Rent a sports car tips &amp; advices</h4>
+                            <p>They are no standard cars. More performance and power. Read these tricks and find out how to get the most out of them while keeping it safe.</p>
+                            <p class="mydiv">personifying</p>
+                            <span class="vice">philadelphia nonannexable</span>
+                            <span class="frow">megalomania</span> 
+                            <a href="font-combinations.html" class="btn btn-info">Read more
+                         <i class="fa fa-angle-right"></i></a>
+                            <p class="kiwi">gloriousness</p><span class="vice">recancellation paulownia</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <div class="resource-blk rounded"> 
+                        <img src="assets/images/cars/res2.jpg" alt="resource-blk-image" class="img-responsive">
+                        <div class="content"> 
+                            <h4 class="heading">Perfect family cars choices</h4>
+                            <p>There are a few things you should keep in mind if you’re looking to get at the destination in comfort with your big family and enjoy the ride.</p>
+                            <p class="lefty">aetiology</p>
+                            <span class="coma">paulownia thiobacilli</span>
+                            <span class="poll">virility</span> 
+                            <a href="font-combinations.html" class="btn btn-info">Read more
+                             <i class="fa fa-angle-right"></i></a>
+                            <p class="lefty">bipartisanship</p>
+                            <span class="classy">euphemia saxicolous</span> </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <div class="resource-blk rounded"> 
+                        <img src="assets/images/cars/res3.jpg" alt="resource-blk-image" class="img-responsive">
+                        <div class="content">
+                            <h4 class="heading">Looking to have some off-road fun?</h4>
+                            <p>Well, let us give you some tips and tricks on this one. It really depends on how deep you are looking to get off-road. Read some of our expert’s advices.</p>
+                            <p class="mydiv">nonunanimous</p>
+                            <span class="mydiv">hematocyst exorability</span>
+                            <span class="bura">retabulated</span> 
+                            <a href="font-combinations.html" class="btn btn-info">Read more <i class="fa fa-angle-right"></i></a>
+                            <p class="poll">effigiated</p>
+                            <span class="vice">endoplasm insulination</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center">
+                    <div class="resource-blk rounded"> <img src="assets/images/cars/res4.jpg" alt="resource-blk-image" class="img-responsive">
+                        <div class="content"> 
+                            <h4 class="heading">Wind in your hair on a twisty road?</h4>
+                            <p>We all like convertibles. Especially when the weather is perfect. They connect you more to the surroundings. Check out our tips & tricks.</p>
+                            <p class="bura">appendices</p>
+                            <span class="lefty">unradical voroshilovsk</span>
+                            <span class="poll">unfugitive</span> 
+                            <a ng-href="carsaleitem" class="btn btn-info">Read more 
+                            <i class="fa fa-angle-right"></i>
+                           </a>
+                            <p class="lehi">multijugate</p>
+                            <span class="sown">extravagance aristodemocracy</span> 
+
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.articles -->
+
+    <!-- vehicles catalog -->
+    <section class="bg-grey pb30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-intro">
+                    <h1 class="heading">Vehicles catalog</h1>
+                     <span>Here are the cars for rent we have for you. Choose the one which suits you best and have a nice time.
+                     </span>
+                </div>
+            </div>
+            <signup_responsediv class="row">
+                <div class="col-sm-6 col-lg-4" ng-repeat="car in cars">
+                    <div class="rent-blk-rows bg-white shadow">
+                        <div class="blk-content favorite">
+                            <div class="text-center carView">
+                                <img ng-show="car.feature_image" class="img-responsive" src="data:image/gif;base64,{{ car.feature_image }}">
+                                <!-- <img src="assets/images/cars/cars6.png" alt="car rent image" class="img-responsive"> -->
+                                <h4>{{car.make_id[1]}} {{car.model_id[1]}} &nbsp;<span>{{car.year}}</span>
+                                </h4>
+
+                                <span class="rent-price">Starting at <b>KES {{car.hire_price}}</b>/day</span>
+
+
+                            </div>
+
+                            <div class="text-center favorite-stars">
+                                <span class="stars">
+                                      <i class="fa fa-star"></i>
+                                       <i class="fa fa-star"></i> 
+                                       <i class="fa fa-star"></i> 
+                                       <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-empty"></i> 
+                                    </span>
+
+                            </div>
+
+                            <span class="text-center cd-car-spec"> {{car.description}}</span>
+                            <div class="clearfix">
+                                <div class="request pull-left">
+                                    <span>Age:</span>
+                                    <p>25+ years</p>
+
+                                </div>
+                                <div class="request text-right pull-right">
+
+                                    <span>Driver Experience:</span>
+                                    < <p>3+ years</p>
+                                </div>
+                            </div> <a href="#" class="btn btn-success" data-toggle="modal" data-target="#reservation-modal" ng-click="select_reserve_car(car)">Continue to car reservation <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- /.testimonials -->
+
+
+    <!-- popular picks -->
+    <section class="bg-white pb30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-intro">
+                    <h1 class="heading">Popular picks</h1>
+                     <span>Numbers are numbers. Here are our most popular auto rental choices.</span>
+                     <span class="lefty">mediatise</span> 
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="popularcar in cars">
+                    <div class="thumbnail bg-white small-rent"> 
+
+                        <a ng-href="#" class="rent-lnk"></a>
+                        
+                           <img src="data:image/gif;base64,{{ popularcar.feature_image }}" alt="{{popularcar.make}} {{popularcar.model}}" class="img-responsive animated fadeInLeft">
+
+                        <h4>{{popularcar.name}} <span>{{popularcar.year}}</span>
+                        </h4> 
+                        <span class="car-spec">Starting at <b>KES {{popular.hire_price}}</b>/<small>day</small>
+                         </span>
+                        <a ng-href="#" class="btn btn-success">Details 
+                        <i class="fa fa-angle-right"></i></a>
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+    <!-- /.popular picks -->
+
+    <!-- overview-->
+    <section class="bg-grey overview pb30" ng-repeat="car in cars">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center section-intro">
+                    <h1 class="heading">Overview</h1> 
+                    <span>Roll up some numbers overview</span>
+                    <span class="lefty">prepenetration</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3 text-center">
+                    <div class="count-blk">
+                        <h3 class="count">8</h3> <a href="#">car dealers</a>
+                        <p class="vice">diakonikon</p>
+                        <span class="poll">semeiotic rationalizing</span>
+                     </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 text-center">
+                    <div class="count-blk">
+                        <h3 class="count">12</h3> <a href="#">locations</a>
+                        <p class="sown">babyishness</p>
+                        <span class="sown">bipinnaria overneutralized</span> 
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 text-center">
+                    <div class="count-blk">
+                        <h3 class="count">712</h3> <a href="#">vehicles for sale</a>
+                        <p class="classy">intermetatarsal</p>
+                        <span class="classy">semibouffant controversial</span> 
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 text-center">
+                    <div class="count-blk">
+                        <h3 class="count">98</h3> <a href="#">discounted offers</a>
+                        <p class="divc">overdiscouraging</p>
+                        <span class="lefty">preascetic overwetted</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.overview-->
+
+
+
+</main>
+<!-- /.main content -->
+
+<!-- Reservation car modal -->
+<div class="modal fade" id="reservation-modal" tabindex="-1" role="dialog" aria-labelledby="reservationLabel" >
+    <div class="modal-dialog reservation-form-wrapp" role="document" style="width: 770px">
+        <div class="modal-content">
+            <div class="modal-header blk-intro">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">Close</span><span class="mydiv">revalidation</span>
+             </button>
+                <h4 class="modal-title" id="reservationLabel">Car reservation </h4>
+            </div>
+            <div class="modal-body" ng-if="!reservation_response">
+                <!-- form -->
+
+                     <p style="color:green">{{data.reservation_response}}</p>
+                     <p style="color:red">{{data.error}}</p>
+
+                <form class="reservation-form clearfix">
+                    <div class="col-sm-6 col-lg-6">
+                        <div class="car-preview">
+                            <h3>{{data.selectedCar.name}} <span>{{data.selectedCar.year}}</span>
+                            <span class="lefty">insulination</span></h3>
+
+
+
+                            <img src="data:image/gif;base64,{{ data.selectedCar.feature_image }}" alt="{{c.make}} {{c.model}}" class="img-responsive">
+
+                        </div>
+                        <h4 class="title">Contact information</h4>
+                        <div class="form-group"> <label>Full name</label> 
+                        <input type="text" ng-model="data.name" class="form-control" placeholder="full name"> </div>
+                        <div class="row">
+                            <div class="form-group col-lg-6"> 
+                            <label>Phone number</label>
+                              <input type="tel" ng-model="data.phone" class="form-control" placeholder="+254 700 242 203"> </div>
+
+                                <div class="form-group col-lg-6"> <label>ID /Lisence No</label> 
+                              <input type="text" ng-model="data.license_or_id" class="form-control" placeholder="id or lisense" required>
+
+                               </div>
+
+                        </div>
+                            <div class="form-group"> 
+                                <label>E-mail address</label> 
+                            <input type="email" ng-model="data.email" class="form-control" placeholder="youremail@address.com" required> 
+                        </div>
+                        </div>
+
+
+                    <div class="col-sm-6 col-lg-6">
+                        <h4 class="title">Order details</h4>
+                        <div class="form-group"> <label>Pick-up place </label> 
+
+                        <select 
+                            class="cd-select select-region"
+                            style="width: 100%"
+                            data-placeholder="Location" 
+                            ng-model="data.location" 
+                            ng-options="m.location for m in cars">    
+                        </select>
+
+                          </div>
+    
+
+                        <div class="row">                        
+            
+
+                            <div class="form-group input-append col-lg-6"> 
+                              <label>Pick-up date and time</label>
+                               <!-- <input type="text" ng-model="data.pick_up_date" placeholder="02/20/2018" class="text-uppercase daySelect" id="curentDay"> -->
+                                <input type="date" class="well well-sm" uib-datepicker-popup ng-model="data.pick_up_date" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" id="curentDay" close-text="Close" ng-click="open1()" />
+
+                             <span class="icon"><i class="fa fa-angle-down"></i></span>
+                             <span class="vice">inexorable</span> 
+                          </div>
+
+
+                        <!--     <div class="form-group input-append col-lg-6 timepick">
+                             <input type="text" ng-model="data.pick_time" placeholder="12:00 AM" id="curentHour"> 
+                             <span class="icon"><i class="fa fa-angle-down"></i></span>
+                             <span class="classy">reapplying</span>
+
+                             </div> -->
+
+                          <div class="form-group input-append col-lg-6"> 
+                            <label>Drop-off date and time</label>
+                        <!-- 
+                           <input type="text" ng-model="data.drop_of_date" placeholder="02/20/2018" class="text-uppercase daySelect" id="dropDay"> --> 
+
+
+                            <input type="date" class="well well-sm" uib-datepicker-popup ng-model="data.drop_of_date" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" id="dropDay" ng-click="open2()" />
+
+ 
+
+                           <span class="icon"><i class="fa fa-angle-down"></i>
+                         </span>
+                           <span class="vice">supraorbital</span>                          
+                           </div>
+
+                          <!--   <div class="form-group input-append col-lg-6 timepick"> 
+                            <input type="text" ng-model="drop_time" placeholder="12:00 AM" id="dropHour">
+                             <span class="icon"><i class="fa fa-angle-down"></i></span>
+                             <span class="poll">ununitable</span>
+                            </div> -->
+                        </div>
+
+                        <ul class="list-unstyled result-dates">
+                            <li class="clearfix"> 
+                                <span class="pull-left">Dates:</span>
+                                <span class="bura">nonnegligibleness</span>
+                                 <span class="pull-right"> 
+                                    <b id="startR">{{data.pick_up_date}}</b> to <b id="endR">{{data.drop_of_date}}</b> 
+                                </span>
+                                <span class="mydiv">comptometer</span>
+                            </li>
+
+                            <li class="clearfix"> 
+                                <span class="pull-left">Pick-up/drop-off time:</span>
+                                <span class="classy">exegetics</span> 
+                                <span class="pull-right"> <b id="pickT">{{data.pick_time}}</b> </span>
+                                <span class="divc">nonnegligibleness</span>
+                           </li>
+
+
+                            <li class="clearfix"> 
+                                <span class="pull-left">Number of days:</span>
+                                <span class="fitz">nonponderous</span>
+                                <span class="pull-right"><b id="daysN">{{data.no_of_days || 0}} days</b></span>
+                                 <span class="sown">neronizing</span> 
+                           </li>
+
+                            <li class="clearfix"> <span class="pull-left">Price per day:</span>
+                                <span class="vice">insulination</span> 
+                                <span class="pull-right"> <b id="dayP">KES {{data.selectedCar.hire_price}}</b> </span>
+                                <span class="classy">recancellation</span> 
+                            </li>
+
+                            <li class="clearfix"> 
+                                <span class="pull-left">Total:</span>
+                                <span class="vice">unfugitive</span> 
+                                <span class="pull-right"> 
+                                    <b id="totDayP" ng-model="data.total" >KES {{data.total || 0}} </b> 
+                                </span><span class="poll">pseudosubtle</span> 
+
+
+                            </li>
+                        </ul>
+                      </div>
+                            <div class="col-sm-12 col-lg-12">
+                                <hr class="separator"> 
+
+                            </div>
+                            <div class="form-group col-sm-12 col-lg-12">
+                             <label>Additional notes and comments</label>
+                              <textarea name="rent-notes" ng-model="data.rent_notes" class="form-control" placeholder="Please write down all your questions or concerns and we’ll get back with an answer at the earliest convenience">
+            
+                              </textarea>                     
+                               </div>
+
+
+                            <div class="form-group col-sm-6 col-lg-6">
+
+                            <input ng-click="reserveCar()" type="submit" class="btn btn-success" name="Reserve and pay on car pick-upr" value="Reserve and pay on car pick-up" />
+                            </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.Reservation car modal -->
