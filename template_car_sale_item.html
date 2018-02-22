@@ -440,7 +440,7 @@
                             <!-- featured vehicles -->
                             <div class="cd-widget featured-off-widget hidden-sm">
                                 <h2 class="heading">Featured vehicles</h2>
-                                <div class="cd-offer-blk card thumbnail overlayed sale-offer" ng-repeat="featuredcar in cars">
+                                <div class="cd-offer-blk card thumbnail overlayed sale-offer" ng-repeat="featuredcar in cars | limitTo:2">
                                     <div class="cd-offer-img overlayed1"> 
                                         <span class="cd-sale-info">-20%</span>
                                         <span class="classy">rationalizing</span>
@@ -470,28 +470,7 @@
                                     </div>
                                 </div>
 
-                               <!--  <div class="cd-offer-blk card thumbnail overlayed">
-                                    <div class="cd-offer-img overlayed1"> <img src="assets/images/cars/car7.jpg" alt="car-photos" class="img-responsive">
-                                        <!-- hover images gallery 
-                                        <div class="cd-hover-gal owl-carousel">
-                                            <div class="overlayed1"> <img src="assets/images/cars/car6.jpg" alt="car-image" class="img-responsive"> </div>
-                                            <div class="overlayed1"> <img src="assets/images/cars/car4.jpg" alt="car-image" class="img-responsive"> </div>
-                                            <div class="overlayed1"> <img src="assets/images/cars/car5.jpg" alt="car-image" class="img-responsive"> <a href="car-sale-item.html" class="view-more-span">+8 more photos</a>
-                                                <p class="poll">controversial</p><span class="fitz">hexadecane superadornment</span> </div>
-                                        </div> <a href="car-sale-item.html" class="cd-offer-lnk"></a>
-                                        <p class="fitz">necessitude</p><span class="classy">retabulated pyophthalmitis</span> </div>
-                                    <div class="cd-offer-meta">
-                                        <h4 class="heading">Mercedes-Benz Sl II (W218) 350 CDI </h4>
-                                        <h4 class="cd-price price">KES51,124</h4> <span class="cd-car-spec">45 521 mi, 3.0 AT, 265 bhp, RWD</span><span class="lefty">unengineered</span> </div>
-                                </div> -->
-                                <!-- <div class="cd-offer-blk card thumbnail overlayed">
-                                    <div class="cd-offer-img overlayed1"> <img src="assets/images/cars/car1.jpg" alt="car-photos" class="img-responsive"> <a href="car-sale-item.html" class="cd-offer-lnk"></a>
-                                        <p class="bura">saxicolous</p><span class="poll">variolitic philosophicalness</span> </div>
-                                    <div class="cd-offer-meta">
-                                        <h4 class="heading">Mercedes-Benz CLS II (W218) 350 CDI </h4>
-                                        <h4 class="cd-price price">KES43,997</h4>
-                                        <h4 class="old-price price">KES 49.979</h4> <span class="cd-car-spec">38 755 mi, 3.0 AT, 265 bhp, RWD</span><span class="bura">zygotically</span> </div>
-                                </div> -->
+                             
 
 
                              
@@ -506,16 +485,33 @@
                         <div id="cd-item-slider" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner rounded" role="listbox">
-                                <div class="item overlayed1 active" data-bg="assets/images/slider/car-item/slide1.jpg">
+                               <!--  <div class="item overlayed1 active" data-bg="assets/images/slider/car-item/slide1.jpg">
                                     
-                                </div>
-                                <div>
-                                     <img ng-show="car.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div> -->
+                                <div class="item overlayed1 active" >
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
                                     
                                 </div>
 
-                                <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide3.jpg"></div>
-                                <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide4.jpg"></div>
+                                <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                 <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                 <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                 <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                 <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                 <div class="item overlayed1">
+                                     <img ng-show="listing.feature_image" class="img-responsive" src="data:image/gif;base64,{{ listing.feature_image }}">
+                                </div>
+                                <!-- <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide4.jpg"></div>
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide5.jpg"></div>
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide6.jpg"></div>
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide7.jpg"></div>
@@ -526,7 +522,7 @@
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide12.jpg"></div>
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide13.jpg"></div>
                                 <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide14.jpg"></div>
-                                <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide15.jpg"></div>
+                                <div class="item overlayed1" data-bg="assets/images/slider/car-item/slide15.jpg"></div> -->
                             </div>
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
@@ -588,20 +584,9 @@
 
                                 <div class="clearfix"></div>
                                 <p> {{listing.description}} </p>
-                               <!--  <p class="fitz">effigiated</p>
-                                <span class="bura">informatively pyophthalmitis</span>
-                                <span class="sown">diakonikon</span>
-                                <p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                                <p class="lehi">deoxygenate</p>
-                                <span class="classy">ariminum endoplasm</span>
-                                <span class="vice">peculiarized</span>  -->
+                               
                             </div>
-                           <!--  <ul class="list-inline certified-list">
-                                <li> <img src="assets/images/carfax-logo_03.png" alt="carfax-logo" class="img-responsive"> </li>
-                                <li> <span class="cd-item-vin-number">VIN number: WDD2221331A<sup>****</sup>01</span><span class="lefty">pinguidity</span> </li>
-                                <li class="text-right"> <a href="#" class="btn btn-link text-capitalize" target="_blank"> <i class="fa fa-external-link"></i> Verify carfax vehicle history report </a>
-                                    <p class="divc">abolisher</p><span class="frow">peculiarized lovableness</span> </li>
-                            </ul> -->
+                         
                             
                         </div>
                         <!-- /.listing description -->

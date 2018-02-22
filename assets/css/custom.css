@@ -15,13 +15,7 @@
 
 }
 
- .full button span {
-    background-color: limegreen;
-    border-radius: 32px;
-    color: black;
-  }
-  .partially button span {
-    background-color: orange;
-    border-radius: 32px;
-    color: black;
-  }
+#home a {
+    color:#d2232a;
+}
+
