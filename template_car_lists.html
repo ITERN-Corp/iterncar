@@ -9,13 +9,11 @@
                         <div class="row" id="offers-inline">
                             <div class="col-lg-12">
 
-
-
-
                                 <!-- inline offer with sale icon-->
                                 <div class="cd-offer-inline bg-grey sale-offer" ng-repeat="car in cars | filter : search"">
                                     <div class="sale-type1">
-                                        <div class="sale-type1"> <span class="cd-sale-info">-20%</span><span class="kiwi">thiobacilli</span> </div>
+                                        <div class="sale-type1"> 
+                                            <span class="kiwi">thiobacilli</span> </div>
                                     </div>
                                     <div class="cd-offer-img overlayed1">
                                       <img src="data:image/gif;base64,{{ car.feature_image }}" alt="{{car.make}} {{car.model}}" class="img-responsive" alt="car-photos">
@@ -95,16 +93,6 @@
 
                                     <input type="text" ng-model="search" placeholder="search">
                                   
-
-                                     <!--  <select 
-                                        class="cd-select js-example-basic-multiple select-region"
-                                        multiple="multiple" 
-                                        id="cd-region" 
-                                        style="width: 100%"
-                                        data-placeholder="Location" 
-                                        ng-model="data.location" 
-                                        ng-options="m.location for m in cars">    
-                                    </select> -->
                                  </div>
                             </div>
 
@@ -113,13 +101,10 @@
                             <div class="aside-blk">
                                 <div class="custom-range">
                                     <p> <label for="carPrice">Price range
-<!--                                     <span class="bura">vectorially</span>
- -->                                    </label>
+                                   </label>
                                      <input type="text" id="carPrice" readonly class="pull-left">
                                      <input type="text" id="carPrice2" readonly class="pull-right"> </p>
-                                    <!-- <p class="lefty">retabulated</p>
-                                    <span class="sown">biedermeier semibouffant</span>
-                                    <span class="bura">paulownia</span> -->
+                                   
                                     <div id="carPriceRange"></div>
                                     <div class="clearfix"></div>
                                 </div>

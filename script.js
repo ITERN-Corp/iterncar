@@ -39,7 +39,7 @@ carItern.config(function($routeProvider, $locationProvider) {
         })
         .when('/dealercatalog', {
             templateUrl : 'template_dealers_catalog.html',
-            //controller: 'cardealerController'
+           //controller: 'cardealerController'
         })
 
         .when('/carsaleitem/:id', {
@@ -79,6 +79,11 @@ carItern.config(function($routeProvider, $locationProvider) {
             templateUrl : 'template_car_submit.html',
             controller: 'submitcarController'
         })
+       .when('/rentadvice/:id',{
+            templateUrl:'template_advice.html',
+            controller: 'rentadviceController'
+
+       })
 
        .when('/page404', {
             templateUrl : 'template_404.html',
@@ -87,63 +92,11 @@ carItern.config(function($routeProvider, $locationProvider) {
         });
         
        
-
-        /*.when('/singlelisting', {
-            params : {
-                'id': 1
-            },
-            url: '/singlelisting',
-            templateUrl : 'template_single_listing.html',
-            controller: 'singleListingController'
-        })
-        
-        .when('/dashboard', {
-            templateUrl : 'template_dashboard.html'
-        })
-        
-        // route for the home page
-        .when('/dashboard1', {
-            templateUrl : 'dashboard.html',
-            controller  : 'mainController'
-        });*/
     $locationProvider.html5Mode(true);
 });
 
 
 
-
-carItern.controller('singleListingController', [
-    '$scope', '$http', '$timeout', '$rootScope', '$location', '$route', '$routeParams', 'jsonRpc', 
-    function($scope, $http, $timeout, $rootScope, $location, $route, $routeParams, jsonRpc, data){ 
-
-        console.log("called");
-        
-        $scope.id = $routeParams.id;
-        $scope.load_singleListing = function(id){
-            var config = {headers:  {
-                "Content-Type":"json",
-                }
-            };
-            var data = {
-                'singleListingId': id
-            };
-
-            $http.post($rootScope.host + '/web/singlelisting', data).success(function(data, status, headers, config) {
-                var listing = data.result.singlelisting;
-                // if listing doesn not exist redirect to 404.
-                if (!listing){
-                    window.location.href = 'page404';
-                }else{
-                    $scope.listing = listing[0];
-                }
-            }).error(function(data, status) { 
-                console.log('failed');  
-            });
-            
-        }
-        $scope.load_singleListing($scope.id);
-
-}]);
 
 
 
@@ -305,12 +258,7 @@ carItern.controller('mainController', [
             $rootScope.user = response.records[0];
             $rootScope.bodyclass = 'no-skin';
             $rootScope.loggedin = true;
-            // $.when(
-            //     $scope.load_work_orders(),
-            //     $scope.load_parts()
-            // ).done(function() {
-            //     $scope.hide_loader();
-            // });
+           
             console.log("$rootScope.user", $rootScope.user);
         },function(response){
             $scope.odoo_error = {
@@ -369,7 +317,6 @@ carItern.controller('mainController', [
                 $rootScope.eng_transmission = data.result.eng_transmission;
 
                 $rootScope.featured_cars = data.result.featured_cars;
-                // $rootScope.categories = data.result.cate;
                 console.log('$rootScope.cars', $rootScope.carmakes);
             }).error(function(data, status) { 
                 console.log('failed');  
@@ -450,6 +397,60 @@ carItern.controller('mainController', [
         }
     }
 
+
+   $rootScope.rent_advice=[];
+
+    $scope.load_rent_advice = function(){
+
+         if (!$rootScope.rent_advice.length){
+            console.log("Advice called");
+            var config = {headers:  {
+                "Content-Type":"json",
+                }
+            };
+            var data = {};
+
+            $http.post($rootScope.host + '/web/rentingadvice', data).success(function(data, status, headers, config) {
+                $rootScope.rent_advice = data.result.rent_advice;
+
+                console.log('$rootScope.rent_advice', $rootScope.rent_advice);
+            }).error(function(data, status) { 
+                console.log('failed');  
+            });
+        }
+
+
+
+    }
+    $scope.load_rent_advice();
+
+
+  $rootScope.partners=[];
+
+    $scope.load_dealers = function(){
+
+         if (!$rootScope.partners.length){
+            console.log("partners called");
+            var config = {headers:  {
+                "Content-Type":"json",
+                }
+            };
+            var data = {};
+
+            $http.post($rootScope.host + '/web/partners', data).success(function(data, status, headers, config) {
+                $rootScope.partners = data.result.partners;
+
+               console.log('$rootScope.partners', $rootScope.partners);
+            }).error(function(data, status) { 
+                console.log('failed');  
+            });
+        }
+
+
+
+
+    }
+    $scope.load_dealers();
 
   
 }]);
