@@ -1,4 +1,4 @@
-var carItern = angular.module('carItern', ['ngRoute', 'odoo','ui.bootstrap']);
+var carItern = angular.module('carItern', ['ngRoute', 'odoo','ui.bootstrap','angularUtils.directives.dirPagination']);
 
 carItern.directive('includeReplace', function () {
     return {
@@ -101,14 +101,29 @@ carItern.config(function($routeProvider, $locationProvider) {
 
 
 carItern.controller('mainController', [
-    '$scope', '$http', '$timeout', '$rootScope', '$location', '$route', '$routeParams','jsonRpc', 
-    function($scope, $http, $timeout, $rootScope, $location, $route, $routeParams, jsonRpc, data){  
+    '$scope', '$http', '$timeout','$filter', '$rootScope', '$location', '$route', '$routeParams','jsonRpc', 
+    function($scope, $http, $timeout, $filter, $rootScope, $location, $route, $routeParams, jsonRpc, data){  
    
     $scope.data = {};
+
 
     $rootScope.host = "http://odootrip.br";
     $rootScope.database = 'odoo10';
     jsonRpc.odoo_server = $rootScope.host;
+
+    //pagination
+
+    $scope.currentPage = 1;
+    $scope.itemsPerPage = 20;
+    $scope.maxSize = 20;
+    $scope.totalItems = 250;
+    
+    for(var i = 0; i < 250; i++){
+        $scope.data[i] = { name: 'cars ' + i }
+    }
+
+      // end pagination
+
 
       $scope.today = function() {
         $scope.data.drop_of_date = new Date();
@@ -451,6 +466,8 @@ carItern.controller('mainController', [
 
     }
     $scope.load_dealers();
+
+
 
   
 }]);

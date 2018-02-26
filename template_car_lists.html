@@ -4,13 +4,18 @@
             <div class="container">
                 <div class="row">
                     <!-- content -->
+                    <aside>
+                           <input type="text" ng-model="search" placeholder="search" style="float: right;width: 25%">
+
+                    </aside>
+
                     <div class="col-md-9 col-lg-9" id="demoCars">
                         <!-- offers inline view -->
                         <div class="row" id="offers-inline">
                             <div class="col-lg-12">
 
                                 <!-- inline offer with sale icon-->
-                                <div class="cd-offer-inline bg-grey sale-offer" ng-repeat="car in cars | filter : search"">
+                                <div class="cd-offer-inline bg-grey sale-offer" dir-paginate="car in cars|orderBy:sortKey:reverse|filter:search|itemsPerPage:2"">
                                     <div class="sale-type1">
                                         <div class="sale-type1"> 
                                             <span class="kiwi">thiobacilli</span> </div>
@@ -51,135 +56,25 @@
                             <div class="col-lg-12 text-center">
                                 <nav aria-label="Page navigation">
                                     <ul class="pagination">
-                                        <li class="active"><a href="#">1</a>
-                                            <p class="coma">vindicated</p><span class="classy">admiringly inapproachability</span></li>
-                                        <li><a href="#">2</a>
-                                            <p class="fitz">variolitic</p><span class="lefty">monotrichic undermelody</span></li>
-                                        <li><a href="#">3</a>
-                                            <p class="lehi">unargumentative</p><span class="fitz">semeiotic undersaturated</span></li>
-                                        <li><span>...</span><span class="lehi">unmilitarised</span></li>
-                                        <li><a href="#">10</a>
-                                            <p class="sown">pseudosubtle</p><span class="lefty">overenvious superadornment</span></li>
+                                        <li class="active">
+                                      
+                                             <dir-pagination-controls
+                                               max-size="5"
+                                               direction-links="true"
+                                               boundary-links="true" >
+                                            </dir-pagination-controls>
+
+                                        </li>
+                                        
                                     </ul>
+
+
+                                    </div>
                                 </nav>
                             </div>
                         </div>
                     </div>
                     <!-- /.content -->
-
-
-                    <!-- search sidebar -->
-
-
-                    <aside class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="bg-white shadow rounded cd-search-sidebar">
-                        
-
-                          
-                            <!-- car location -->
-                            <div class="aside-blk">
-                                <div class="custom-range">
-                                    <p> <label for="locRange">Search 
-                                        <span class="mydiv">necessitude</span></label>
-                                         <input type="text" id="locRange" readonly class="pull-left">
-                                         <button class="btn btn-link pull-right"><i class="fa fa-crosshairs"></i>
-                                         </button> 
-                                     </p>
-                                   
-                                    <div id="carLocRange"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="form-group"> 
-
-                                    <input type="text" ng-model="search" placeholder="search">
-                                  
-                                 </div>
-                            </div>
-
-
-                            <!-- car price range -->
-                            <div class="aside-blk">
-                                <div class="custom-range">
-                                    <p> <label for="carPrice">Price range
-                                   </label>
-                                     <input type="text" id="carPrice" readonly class="pull-left">
-                                     <input type="text" id="carPrice2" readonly class="pull-right"> </p>
-                                   
-                                    <div id="carPriceRange"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="custom-checkbox mt15"> 
-                                <label>
-                                 <input type="checkbox" value=""> 
-                                 <span class="cr"><i class="cr-icon fa fa-check"></i>
-                                 </span>
-                                 <span class="kiwi">stipulation</span> Negotiable prices only 
-                                </label> 
-                                </div>
-                                <div class="custom-checkbox"> <label>
-                                 <input type="checkbox" value=""> 
-                                 <span class="cr"><i class="cr-icon fa fa-check"></i></span>
-                                 <span class="classy">stipulation</span> Discounted prices only </label>
-                                </div>
-                                <div class="custom-checkbox"> 
-
-
-                            </div>
-                        
-                          
-                            <!-- car exterior colors -->
-                            <div class="aside-blk colors"> <label>Exterior color</label>
-                                <ul class="list-inline color-list multiple">
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Black" style="background-color: #000"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="White" style="background-color: #fff"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Grey" style="background-color: #ccc"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Color" style="background-color: #999"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Beige" style="background-color: #ebdec9"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Brown" style="background-color: #996633"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Gold" style="background-color: #ffcc66"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Yellow" style="background-color: #ffff00"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Orange" style="background-color: #ff9900"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Red" style="background-color: #cc3333"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Pink" style="background-color: #ff3399"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Color" style="background-color: #9966cc"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Color" style="background-color: #0099ff"></button>
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Color" style="background-color: #66cc66"></button>
-                                    </li>
-                                    <li> <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Combined" style="background: #ebdec9; background: -moz-linear-gradient(left, #ebdec9 0%, #ebdec9 50%, #000333 50%, #000333 100%); background: -webkit-linear-gradient(left, #ebdec9 0%,#ebdec9 50%,#000333 50%,#000333 100%); background: linear-gradient(to right, #ebdec9 0%,#ebdec9 50%,#000333 50%,#000333 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebdec9', endColorstr='#000333',GradientType=1 );">
-                                     </button> 
-                                    </li>
-                                    <li><button type="button" class="btn btn-success" style="background-color: #cccccc">N/A</button>
-                                    </li>
-                                    <li class="pull-right">
-                                        <div class="custom-checkbox"> 
-                                            <label class="animated"> <input type="checkbox" checked> 
-                                                <span class="cr">
-                                                <i class="cr-icon fa fa-check"></i>
-                                               </span>
-                                                <span class="lefty">respondency</span> Metalic 
-                                            </label> 
-                                        </div>
-                                    </li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                            </div>
-                           
-                        </div>
-                    </aside>
-                    <!-- /.search sidebar -->
                 </div>
             </div>
             <!-- end container -->
