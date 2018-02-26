@@ -401,7 +401,7 @@ carItern.controller('mainController', [
                 if (data.result.type == 'new_reservation'){
                     $scope.data.reservation_response = data.result.msg;
                 }else{
-                    $scope.data.errorr = data.result.msg;
+                    $scope.data.error = data.result.msg;
                 }
         
                 console.log('response from reservation', data.result)
